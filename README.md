@@ -26,22 +26,8 @@ The demonstrated behavior includes floor requests, simulated door operation, flo
 
 ## 3. Architecture
 
-```text
- Floor Request / HMI ECU ── FLOOR_REQUEST ───────┐
-                                                  v
- Position / Door Sensor ECU <── actuator status  Elevator Controller ECU
-          │                                       │
-          └── DOOR_SENSOR ────────────────────────┤
-                                                  ├── MOTION_COMMAND ──┐
-                                                  └── DOOR_COMMAND ────┤
-                                                                       v
-                                                        Motor / Door Actuator ECU
-                                                                       │
-                                  POSITION_STATUS, ACTUATOR_STATUS ─────┘
-                                                                       │
-                                                                       v
-                                                          Diagnostic ECU
-```
+<img width="1276" height="553" alt="image" src="https://github.com/user-attachments/assets/d15a5c0f-1881-452a-8925-008cc29a7184" />
+
 
 All ECU programs use `vcan0`. The Sensor ECU listens for actuator status and publishes door sensor status. The Actuator ECU publishes simulated position and actuator status. The Controller ECU reads requests and status, then sends commands.
 
