@@ -1,0 +1,11 @@
+CAN_ID_HEX,Message,Sender,Receiver,DLC,Byte_0,Byte_1,Trigger,Status
+0x100,FLOOR_REQUEST,HMI,Controller,2,Requested floor 0-3,Request sequence,On user request,Implemented
+0x110,POSITION_STATUS,Actuator,Controller and Diagnostic,2,Current floor 0-3,Moving 0/1,Periodic about every 100 ms,Implemented
+0x111,DOOR_SENSOR,Sensor,Controller and Diagnostic,2,Door state 0-4,Obstruction 0/1,Periodic about every 500 ms,Implemented
+0x120,MOTION_COMMAND,Controller,Actuator,2,Direction 0 stop 1 up 2 down,Target floor 0-3,On command/state change,Implemented
+0x121,DOOR_COMMAND,Controller,Actuator,2,Action 0 hold 1 open 2 close,Reserved 0,On command/state change,Implemented
+0x130,ACTUATOR_STATUS,Actuator,Sensor,2,Motor state 0 stop 1 up 2 down,Door state 0-4,Periodic about every 100 ms,Implemented
+0x140,ELEVATOR_STATE,Controller,Monitor,2,Controller state 0-6,Target floor 0-3 or 255 none,Periodic about every 100 ms,Implemented
+0x1F0,DIAGNOSTIC_EVENT,Diagnostic,Monitor,2,Event 0 clear 1 sensor timeout,Severity 0 info 1 warning 2 critical,On fault or recovery,Implemented
+0x101,HMI_HEARTBEAT,HMI,Monitor,1,Alive counter,Not used,Planned only,Not implemented
+0x1F1,FAULT_CLEAR_REQUEST,HMI,Diagnostic,2,Action 1 clear,Request sequence,Planned only,Not implemented

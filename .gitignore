@@ -1,0 +1,13 @@
+# Compiled ECU programs
+/hmi_ecu
+/sensor_ecu
+/actuator_ecu
+/controller_ecu
+/diagnostic_ecu
+/logs/
+
+# Editor and OS files
+*~
+.vscode/
+.DS_Store
+*.swp
