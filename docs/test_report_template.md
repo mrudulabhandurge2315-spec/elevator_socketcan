@@ -2,10 +2,9 @@
 
 **Course:** Automotive Communication Networks  
 **Project:** Option 4 — Elevator Control System  
-**Student / Team:**  
-**Date performed:**  
+**Student :** Mrudula Bhandurge  
+**Date performed:** 10/11/2026 
 **Environment:** Ubuntu WSL2  
-**Kernel version:**  
 **CAN interface:** `vcan0`
 
 ## 1. Purpose
